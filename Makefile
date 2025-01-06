@@ -6,7 +6,7 @@
 #    By: alacroix <alacroix@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/04 15:27:43 by alacroix          #+#    #+#              #
-#    Updated: 2025/01/04 17:11:05 by alacroix         ###   ########.fr        #
+#    Updated: 2025/01/06 11:29:37 by alacroix         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,27 +31,21 @@ FT_PRINTF_SRC = ft_printf/ft_printf.c ft_printf/ft_printf_utils.c ft_printf/ft_p
 SRC = $(CONV_SRC) $(FD_SRC) $(FREE_SRC) $(IS_SRC) $(LST_SRC) $(MATH_SRC) $(MEM_SRC) $(STR_SRC) $(FT_PRINTF_SRC)
 OBJ = $(patsubst %.c, $(OBJDIR)/%.o, $(SRC))
 
-FT_PRINTF_LIB = ft_printf/libftprintf.a
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(FT_PRINTF_LIB)
-	@ar rcs $@ $^
+$(NAME): $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
 
 $(OBJDIR)/%.o: %.c
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -I $(INCDIR) -I ft_printf -c $< -o $@
-
-$(FT_PRINTF_LIB):
-	@$(MAKE) -C ft_printf
+	$(CC) $(CFLAGS) -I $(INCDIR) -c $< -o $@
 
 clean:
 	@rm -rf $(OBJDIR)
-	@$(MAKE) -C ft_printf clean
 
 fclean: clean
 	@rm -f $(NAME)
-	@$(MAKE) -C ft_printf fclean
 
 re: fclean all
 

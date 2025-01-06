@@ -6,11 +6,11 @@
 /*   By: alacroix <alacroix@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:11:56 by alacroix          #+#    #+#             */
-/*   Updated: 2025/01/04 16:12:18 by alacroix         ###   ########.fr       */
+/*   Updated: 2025/01/06 11:34:20 by alacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long long	ft_atol(const char *nptr)
+long long	ft_atoll(const char *nptr)
 {
 	int			i;
 	int			sign;
