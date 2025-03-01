@@ -6,7 +6,7 @@
 /*   By: alacroix <alacroix@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:31:38 by alacroix          #+#    #+#             */
-/*   Updated: 2025/03/01 15:04:39 by alacroix         ###   ########.fr       */
+/*   Updated: 2025/03/01 18:51:25 by alacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,8 @@ t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+int 				ft_dynarray_init(t_dinnaray *arr, size_t elem_size, size_t init_capacity);
+int					ft_dynarray_push(t_dinnaray *arr, void *elem);
+void 				ft_dynarray_free(t_dinnaray *arr);
 
 #endif

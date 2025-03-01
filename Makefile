@@ -6,7 +6,7 @@
 #    By: alacroix <alacroix@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/04 15:27:43 by alacroix          #+#    #+#              #
-#    Updated: 2025/02/26 13:17:28 by alacroix         ###   ########.fr        #
+#    Updated: 2025/03/01 18:53:37 by alacroix         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ INCDIR = includes
 OBJDIR = obj
 
 CONV_SRC = conv/ft_atoi.c  conv/ft_atol.c conv/ft_atoll.c conv/ft_itoa.c
+DYNARRAY_SRC = dynarray/ft_dynarray_free.c dynarray/ft_dynarray_init.c dynarray/ft_dynarray_push.c
 FD_SRC = fd/ft_putchar_fd.c fd/ft_putendl_fd.c fd/ft_putnbr_fd.c fd/ft_putstr_fd.c fd/get_next_line.c
 FREE_SRC = free/ft_free_tab.c
 IS_SRC = is/ft_isalnum.c is/ft_isalpha.c is/ft_isascii.c is/ft_isdigit.c is/ft_isprint.c
@@ -28,7 +29,7 @@ MEM_SRC = mem/ft_bzero.c mem/ft_calloc.c mem/ft_memchr.c mem/ft_memcmp.c mem/ft_
 STR_SRC = str/ft_split.c str/ft_strchr.c str/ft_strdup.c str/ft_striteri.c str/ft_strjoin.c str/ft_strlcat.c str/ft_strlcpy.c str/ft_strlen.c str/ft_strmapi.c str/ft_strncmp.c str/ft_strnstr.c str/ft_strrchr.c str/ft_strtrim.c str/ft_substr.c str/ft_tolower.c str/ft_toupper.c str/ft_strsize_comp.c str/ft_tabsize.c str/ft_strndup.c
 FT_PRINTF_SRC = ft_printf/ft_printf.c ft_printf/ft_printf_utils.c ft_printf/ft_printf_utils2.c
 
-SRC = $(CONV_SRC) $(FD_SRC) $(FREE_SRC) $(IS_SRC) $(LST_SRC) $(MATH_SRC) $(MEM_SRC) $(STR_SRC) $(FT_PRINTF_SRC)
+SRC = $(CONV_SRC) $(DYNARRAY_SRC) $(FD_SRC) $(FREE_SRC) $(IS_SRC) $(LST_SRC) $(MATH_SRC) $(MEM_SRC) $(STR_SRC) $(FT_PRINTF_SRC)
 OBJ = $(patsubst %.c, $(OBJDIR)/%.o, $(SRC))
 
 
