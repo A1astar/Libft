@@ -6,7 +6,7 @@
 /*   By: alacroix <alacroix@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:31:38 by alacroix          #+#    #+#             */
-/*   Updated: 2025/02/26 13:16:59 by alacroix         ###   ########.fr       */
+/*   Updated: 2025/03/01 15:04:39 by alacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,14 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct s_dynarray
+{
+	void 			*data;
+	size_t			element_size;
+	size_t			len;
+	size_t			capacity;
+}					t_dinnaray;
 
 int					ft_atoi(const char *nptr);
 long				ft_atol(const char *nptr);
