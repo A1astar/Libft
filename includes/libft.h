@@ -6,7 +6,7 @@
 /*   By: alacroix <alacroix@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:31:38 by alacroix          #+#    #+#             */
-/*   Updated: 2025/03/01 18:51:25 by alacroix         ###   ########.fr       */
+/*   Updated: 2025/04/02 12:30:44 by alacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
 
 typedef struct s_list
 {
@@ -63,7 +64,7 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*get_next_line(int fd);
-char				**ft_split(char const *s, char c);
+char				**ft_split(char const *s, char const *sep_set);
 void				ft_free_tab(void **tab);
 void				ft_bzero(void *s, size_t n);
 void				ft_putchar_fd(char c, int fd);
