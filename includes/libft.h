@@ -6,7 +6,7 @@
 /*   By: alacroix <alacroix@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:31:38 by alacroix          #+#    #+#             */
-/*   Updated: 2025/04/02 12:30:44 by alacroix         ###   ########.fr       */
+/*   Updated: 2025/04/07 11:12:32 by alacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # endif
 
 # include "ft_printf.h"
+# include <stdbool.h>
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdbool.h>
 
 typedef struct s_list
 {
@@ -31,7 +31,7 @@ typedef struct s_list
 
 typedef struct s_dynarray
 {
-	void 			*data;
+	void			*data;
 	size_t			element_size;
 	size_t			len;
 	size_t			capacity;
@@ -91,8 +91,9 @@ t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
-int 				ft_dynarray_init(t_dinnaray *arr, size_t elem_size, size_t init_capacity);
+int					ft_dynarray_init(t_dinnaray *arr, size_t elem_size,
+						size_t init_capacity);
 int					ft_dynarray_push(t_dinnaray *arr, void *elem);
-void 				ft_dynarray_free(t_dinnaray *arr);
+void				ft_dynarray_free(t_dinnaray *arr);
 
 #endif
